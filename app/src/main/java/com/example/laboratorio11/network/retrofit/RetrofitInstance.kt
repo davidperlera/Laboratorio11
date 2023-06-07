@@ -8,12 +8,13 @@ const val BASE_URL = "https://retrofit.up.railway.app/"
 
 object RetrofitInstance {
 
-    private var token = ""
+    private var TOKEN = ""
 
     fun setToken(token: String) {
-        this.token = token
+        this.TOKEN = token
     }
 
+    //retrofit instance
     private val retrofit = Retrofit.Builder()
         .baseUrl(BASE_URL)
         .addConverterFactory(GsonConverterFactory.create())
